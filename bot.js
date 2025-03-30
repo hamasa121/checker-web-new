@@ -16,7 +16,7 @@ client.once('ready', () => {
 
 app.post('/visit', async (req, res) => {
     visitCount++;
-    const channel = client.channels.cache.get('1355919528877363270');
+    const channel = client.channels.cache.get('1355919528877363270');    
     if (channel) {
         await channel.send(`🔥 Visitor #${visitCount} hit Token Checker! Chaos level: MAX! 🔥`);
         console.log(`Visit #${visitCount} logged`);
@@ -28,4 +28,3 @@ app.post('/visit', async (req, res) => {
 });
 
 app.listen(3000, () => console.log('Server live on http://localhost:3000'));
-client.login("MTI3MzEwNTA2MzU1NTg5NTMwNg.GtpcP9.5c5sH4nga2pd0kq_5Au6T_EgITBFrk29ZFKFWo");
